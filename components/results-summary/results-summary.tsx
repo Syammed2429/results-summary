@@ -45,7 +45,7 @@ export const ResultsSummary = () => {
   return (
     <div className='flex flex-col justify-center items-center  md:flex-row md:justify-normal md:items-stretch max-sm:min-h-screen   w-[100vw] md:w-[46rem] md:h-[35rem] rounded-[2rem] bg-[#fff] shadow-[0px_30px_60px_0px_rgba(61,108,236,0.15)] '>
       <div className=' w-[23rem] h-[22rem] md:h-full rounded-br-[2rem] rounded-bl-[2rem]  md:rounded-[2rem] your-results flex flex-col justify-center items-center space-y-2 md:space-y-8'>
-        <div className='text-[#CAC9FF] text-lg  md:text-2xl md:pt-8'>
+        <div className='text-[#CAC9FF] text-lg  md:text-2xl pt-8'>
           Your Result
         </div>
         <div className='flex justify-center items-center'>
