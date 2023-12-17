@@ -43,30 +43,34 @@ export const ResultsSummary = () => {
     },
   ];
   return (
-    <div className='flex flex-col justify-center items-center  md:flex-row md:justify-normal md:items-stretch min-h-screen  w-[100vw] md:w-[46rem] md:h-[35rem] rounded-[2rem] bg-[#fff] shadow-[0px_30px_60px_0px_rgba(61,108,236,0.15)] '>
-      <div className=' w-[23rem] rounded-[2rem] your-results flex flex-col justify-center items-center space-y-8'>
-        <div className='text-[#CAC9FF] text-2xl pt-'>Your Result</div>
+    <div className='flex flex-col justify-center items-center  md:flex-row md:justify-normal md:items-stretch max-sm:min-h-screen   w-[100vw] md:w-[46rem] md:h-[35rem] rounded-[2rem] bg-[#fff] shadow-[0px_30px_60px_0px_rgba(61,108,236,0.15)] '>
+      <div className=' w-[23rem] h-[22rem] md:h-full rounded-br-[2rem] rounded-bl-[2rem]  md:rounded-[2rem] your-results flex flex-col justify-center items-center space-y-2 md:space-y-8'>
+        <div className='text-[#CAC9FF] text-lg  md:text-2xl md:pt-8'>
+          Your Result
+        </div>
         <div className='flex justify-center items-center'>
-          <div className=' flex justify-center items-center flex-col bg-[#462BDC] w-[12.5rem] h-[12.5rem] rounded-full shadow-inner shadow-inset inset-shadow '>
-            <div className='text-white text-[4.5rem]'>76</div>
+          <div className=' flex justify-center items-center flex-col bg-[#462BDC] h-[8.75rem] w-[8.75rem] md:w-[12.5rem] md:h-[12.5rem] rounded-full shadow-inner shadow-inset inset-shadow '>
+            <div className='text-white text-[3.5rem] md:text-[4.5rem] font-extrabold'>
+              76
+            </div>
             <div className='text-[#CAC9FF]'>of 100</div>
           </div>
         </div>
-        <div className='text-[#fFF] text-3xl'>Great</div>
-        <div className='text-[#CAC9FF] text-lg w-[16.25rem] text-center'>
+        <div className='text-[#fFF] text-2xl md:text-3xl'>Great</div>
+        <div className='text-[#CAC9FF] text-sm md:text-lg w-[16.25rem] text-center  md:mb-0'>
           Your performance exceed 65% of the people conducting the test here!
         </div>
       </div>
 
-      <div className=' w-[23rem] space-y-8 flex flex-col justify-center '>
-        <div className='pt- ml-8 text-[#303B59] text-2xl font-bold '>
+      <div className=' md:w-[23rem] space-y-4 md:space-y-8 flex flex-col justify-center '>
+        <div className='pt-10 md:pt-0 md:ml-10 text-[#303B59] text-lg md:text-2xl font-bold '>
           Summary
         </div>
         <div className='flex flex-col justify-center items-center'>
           {summaryData?.map((data) => (
             <div
               key={data?.id}
-              className={`${data?.bgColor} flex items-center gap-3 rounded-xl text-lg my-2 w-[18rem] py-4 px-5`}
+              className={`${data?.bgColor} flex items-center gap-3 rounded-xl text-base md:text-lg my-2 w-[18rem] py-4 px-5`}
             >
               <Image src={data?.icon} alt={data?.name} />
               <div className={`flex-1  font-medium ${data?.text}`}>
