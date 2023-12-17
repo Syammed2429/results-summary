@@ -14,6 +14,7 @@ export const ResultsSummary = () => {
       bgColor: 'bg-[#fff6f5]',
       value: 80,
       icon: reactionIcon,
+      text: 'text-[#d47f7e]',
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ export const ResultsSummary = () => {
       bgColor: 'bg-[#fdfbf2]',
       value: 92,
       icon: memoryIcon,
+      text: 'text-[#f4b93d]',
     },
     {
       id: 3,
@@ -28,6 +30,7 @@ export const ResultsSummary = () => {
       bgColor: 'bg-[#f2fbfa]',
       value: 61,
       icon: chatIcon,
+      text: 'text-[#21a685]',
     },
 
     {
@@ -36,12 +39,13 @@ export const ResultsSummary = () => {
       bgColor: 'bg-[#f3f2fe]',
       value: 73,
       icon: visualIcon,
+      text: 'text-[#4851b6]',
     },
   ];
   return (
-    <div className='flex flex-row  w-[46rem] h-[32rem] rounded-[2rem] bg-[#fff] shadow-[0px_30px_60px_0px_rgba(61,108,236,0.15)] '>
-      <div className=' w-[23rem] rounded-[2rem] your-results text-center  space-y-8'>
-        <div className='text-[#CAC9FF] text-2xl pt-10'>Your Result</div>
+    <div className='flex flex-col justify-center items-center  md:flex-row md:justify-normal md:items-stretch min-h-screen  w-[100vw] md:w-[46rem] md:h-[35rem] rounded-[2rem] bg-[#fff] shadow-[0px_30px_60px_0px_rgba(61,108,236,0.15)] '>
+      <div className=' w-[23rem] rounded-[2rem] your-results flex flex-col justify-center items-center space-y-8'>
+        <div className='text-[#CAC9FF] text-2xl pt-'>Your Result</div>
         <div className='flex justify-center items-center'>
           <div className=' flex justify-center items-center flex-col bg-[#462BDC] w-[12.5rem] h-[12.5rem] rounded-full shadow-inner shadow-inset inset-shadow '>
             <div className='text-white text-[4.5rem]'>76</div>
@@ -49,28 +53,33 @@ export const ResultsSummary = () => {
           </div>
         </div>
         <div className='text-[#fFF] text-3xl'>Great</div>
-        <div className='text-[#CAC9FF] text-lg'>
+        <div className='text-[#CAC9FF] text-lg w-[16.25rem] text-center'>
           Your performance exceed 65% of the people conducting the test here!
         </div>
       </div>
 
-      <div className=' w-[23rem] space-y-4 flex flex-col justify-center '>
-        <div className='pt-5 text-[#303B59] text-2xl font-bold ml-8'>
+      <div className=' w-[23rem] space-y-8 flex flex-col justify-center '>
+        <div className='pt- ml-8 text-[#303B59] text-2xl font-bold '>
           Summary
         </div>
-        <div className='flex flex-col  items-center'>
+        <div className='flex flex-col justify-center items-center'>
           {summaryData?.map((data) => (
             <div
               key={data?.id}
-              className={`${data?.bgColor} flex items-center gap-3 rounded-xl text-lg my-5 w-[18rem] py-4 px-5`}
+              className={`${data?.bgColor} flex items-center gap-3 rounded-xl text-lg my-2 w-[18rem] py-4 px-5`}
             >
               <Image src={data?.icon} alt={data?.name} />
-              <div className='flex-1  font-medium'>{data?.name}</div>
+              <div className={`flex-1  font-medium ${data?.text}`}>
+                {data?.name}
+              </div>
               <div className='text-[#303B59] font-bold '>
                 {data?.value} <span className='opacity-50'>/ 100</span>
               </div>
             </div>
           ))}
+          <div className='bg-[#303B59] w-[18rem] mt-8 mb-10 md:mb-0 py-4 rounded-[8rem] text-center text-white text-lg font-bold'>
+            Continue
+          </div>
         </div>
       </div>
     </div>
